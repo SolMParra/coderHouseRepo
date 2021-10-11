@@ -1,19 +1,24 @@
 import NavBar from "./Components/NavBar";
 import './App.css';
-import React, { useState} from 'react';
+import ItemCount from "./Components/ItemCount";
 
-function App() {
-  const [count, setCount] = useState(0);
+
+ function App() {
+
+  
+
+ 
   return (
     <div className="App">
       <section>
-        <NavBar pedidos={count}/>
+        <NavBar  />
       </section>
+      <ItemCount value={0}/>
       <section >
-                
-                <a class="waves-effect waves-light btn" onClick={() => setCount(count + 1)}>Add to cart</a>
-                <a class="waves-effect waves-light btn" onClick={() => setCount(count - 1)}>Delete</a>
-            </section>
+
+       
+      </section>
+
     </div>
   );
 }
