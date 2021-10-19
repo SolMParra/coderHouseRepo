@@ -1,36 +1,42 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-
-const CounterApp = ({ value = 10 }) => {
-
-    const [counter, setCounter] = useState(value); // []
+import React, { useState,} from 'react'
+import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 
-    // handleAdd
-    const handleAdd = () => {
-        setCounter(counter + 1);
-        // setCounter( (c) => c + 1 );
+export const Counter = ({ stock, product  }) => {
+    const [counter, setCounter] = useState(1)
+    //declaramos variable de counter.
+    //declaramos la funcion setCounter 
+    //declaramos valor inicial 1 en el useState
+    
+    const sumar = () => {
+        if (counter < stock) {
+            setCounter(counter + 1)
+        }
     }
-
-    const handleSubtract = () => setCounter(counter - 1);
-
-    const handleReset = () => setCounter(value);
-
-
-    return (
-        <>
-            <h3>Contador</h3>
-            <h2> {counter} </h2>
-
-            <button onClick={handleAdd}>+1</button>
-            <button onClick={handleReset}>Reset</button>
-            <button onClick={handleSubtract}>-1</button>
-        </>
+    const restar = () => {
+        if (counter > 1) {
+            setCounter(counter - 1)
+        }
+    }
+   return (
+        <div>
+            {stock > 0 ?
+                <div>
+                    <div>
+                        <button onClick={restar} >-</button>
+                        <div>{counter}</div>
+                        <button onClick={(sumar)}>+</button>
+                    </div>
+                    <div>
+                        <Button variant="success">Agregar al carro</Button>
+                        <Link to="/CheckOut">Finalizar compra</Link>
+                    </div>
+                </div>
+                :
+                <p>No hay más disponibilidad</p>
+            }
+        </div>
     )
 }
-
-CounterApp.propTypes = {
-    value: PropTypes.number
-}
-
-export default CounterApp;
+export default Counter
