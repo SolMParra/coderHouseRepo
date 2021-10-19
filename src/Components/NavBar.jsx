@@ -1,28 +1,30 @@
-import React from 'react';
-import styles from '../Components/NavBar.module.css';
-import logo from '../img/logo.svg';
+import React from 'react'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import CartWidget from './CartWidget'
 
 
-const NavBar = (props) => {
 
-    return (
-        <div>
-            <div class="navbar-fixed">
-                <nav>
-                    <div class="nav-wrapper">
-                        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-                        <a href="#!" className={styles.brandlogo}> <img className={styles.imgme} src={logo} alt=""></img></a>
-                        <ul id="nav-mobile"  class="left hide-on-med-and-down">
-                            <li><a href="sass.html"><i class="material-icons black-text">search</i></a></li>
-                            <li><a href="sass.html"><i class="material-icons black-text">person</i></a></li>
-                            <li><div className={styles.count} className='black-text'><span>{props.pedidos}</span></div></li>
-                            <li><a href="sass.html"><i class="material-icons black-text"> add_shopping_cart</i></a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    )
+export default function NavBar() {
+  
+  return (
+    
+    <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" >
+      <Nav.Link href="/Home">SolMarket</Nav.Link>
+      <CartWidget/>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/Home">Home</Nav.Link>
+          <Nav.Link href="/Productos">Productos</Nav.Link>
+          <NavDropdown title="Congelados" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Pescado</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">Carne</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Pollo</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link href="/Nosotros">Nosotros</Nav.Link>
+          <Nav.Link href="/Contacto">Contacto</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  )
 }
-
-export default NavBar;
