@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Productos.css';
-import logo from '../img/logo.svg';
 import ItemListContainer from '../Components/ItemListContainer';
 
 class Productos extends React.Component {
@@ -12,10 +11,6 @@ class Productos extends React.Component {
         <div >
           <div >
             <div >
-              <img
-                src={logo}
-                alt="Logo"
-              />
             </div>
           </div>
         </div>

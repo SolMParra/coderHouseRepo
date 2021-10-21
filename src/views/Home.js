@@ -5,6 +5,7 @@ import './styles/Home.css';
 //import CocinaCeroLogoImage from '../images/CocinaCeroLogo.png';
 import logo from '../img/logo.svg';
 
+
 export default class Home extends Component {
   render() {
     return (
