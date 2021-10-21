@@ -3,7 +3,7 @@ import ItemList from '../Components/ItemList';
 
 
 const useInitialState = () => {
-  const [state, setState] = useState(ItemList);
+  const [state, setState] = useState (ItemList());
 
   const addToCart = payload => {
     setState({
