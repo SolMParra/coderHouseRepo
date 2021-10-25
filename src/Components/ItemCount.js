@@ -3,8 +3,9 @@ import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 
-export const Counter = ({ stock, product  }) => {
-    const [counter, setCounter] = useState(1)
+
+export const ItemCount = ({ stock, value = 1 }) => {
+    const [counter, setCounter] = useState( value )
     //declaramos variable de counter.
     //declaramos la funcion setCounter 
     //declaramos valor inicial 1 en el useState
@@ -39,4 +40,4 @@ export const Counter = ({ stock, product  }) => {
         </div>
     )
 }
-export default Counter
+export default ItemCount

@@ -17,3 +17,12 @@
     width: 80px;
     height: 80px;
   }
+
+.card{
+  display: flex;
+  flex-direction: column !important;
+  border-radius: 5%;
+  border:#77b1cc 1px solid;
+  margin:16px;
+
+}
