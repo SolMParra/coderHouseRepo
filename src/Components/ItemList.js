@@ -33,7 +33,7 @@ export const ItemList = () => {
     } else {
 
       return (
-        <>
+        <div className= "cards">
           {
             product.map((element, id) => (
 
@@ -49,7 +49,7 @@ export const ItemList = () => {
             )
             )
           }
-        </>
+        </div>
       )
     }
     

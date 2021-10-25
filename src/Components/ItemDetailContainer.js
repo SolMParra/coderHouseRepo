@@ -17,12 +17,6 @@ export const ItemDetailContainer = () => {
     getProduct();
   }, []);
 
-
-
-  console.log("entro en la verga esta")
-  console.log(product)
-
-
   const handleLoading = () => {
     if (isLoading) {
       return (
