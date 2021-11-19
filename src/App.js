@@ -1,35 +1,52 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Layout from './Components/Layout';
-import Home from './views/Home';
-import Productos from './views/Productos';
-import NotFound from './views/NotFound';
-import ItemDetailContainer from './Components/ItemDetailContainer'
-import AppContext from './context/AppContext'
-import useInitialState from './hooks/useInitialState'
+import './styles/App.css';
+import Navbar from './Components/NavBar/Navbar';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import imagen from './assets/gabtec-logo_135.gif';
+import {useState} from 'react';
+import Listado from './Components/ListProdHome/listadoProdHome';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './Components/Cart/Cart';
+import {Store} from './store';
+import Checkout from './Components/Checkout/Checkout';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
 
+function App() {
 
-function App  ()  {
-const initialState = useInitialState();
+  const [data,setData] = useState({
+    items: [],
+    cantidad: 0,
+  });
+
 
   return (
-    <AppContext.Provider value={initialState}>
-    <BrowserRouter>
-      <Layout />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/productos" component={Productos} />
-          <Route exact path="/nosotros" />
-        <Route exact path="/contacto" />
-        <Route path="/:product_id">
-          <ItemDetailContainer />
-        </Route>
-        <Route component={NotFound} />
-      </Switch>
-    </BrowserRouter>
-    </AppContext.Provider>
+    <>
+    <Store.Provider value={[data,setData]}>
+      <BrowserRouter>
+        <Navbar src={imagen}/>
+        <Switch>
+            <Route exact path="/">
+              <Listado titulo="Productos destacados" />
+            </Route>
+            <Route exact path="/category/:id">
+              <Listado titulo="Categoria" />
+            </Route>          
+            <Route path="/detail/:idProducto?"> {/* /:id -> (Parametro obligatorio), /:id? -> opcional */}
+              <ItemDetailContainer/>
+            </Route>
+            <Route path="/cart">
+              <Cart/>
+            </Route>  
+            <Route path="/checkout">
+              <Checkout/>
+            </Route>         
+            <Route path="*">
+              <Listado/>
+            </Route>          
+        </Switch>
+      </BrowserRouter>
+    </Store.Provider>
+    </>
   );
 }
 
