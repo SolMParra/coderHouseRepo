@@ -12,16 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.nav-wrapper{
-  background-color: white;
+
+.navbar-fondo{
+  background-color: #e7e7e7;
 }
 
-
-.page-footer{
-  display: flex;
-flex-flow: row ;
-align-content:space-between ;
-
-
+.cargando{
+    font-size: 3rem;
 }
-

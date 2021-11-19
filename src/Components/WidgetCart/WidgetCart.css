@@ -1,0 +1,29 @@
+.widgetCart{
+    height: 100vh;
+    width: 30%;
+    position: fixed;
+    right: -30%;
+    top: 0;
+    background: whitesmoke;
+    z-index: 2;
+    box-shadow: -0.3rem 0 0.3rem rgba(0, 0, 0, 0.2);
+    transition: right 0.5s;
+}
+
+.close {
+    right: -30%;
+  }
+  
+  .open {
+    right: 0;
+  }
+
+  .equis{
+      cursor: pointer;
+      font-weight: bold;
+  }
+
+  .sinProductos{
+    color: brown;
+    font-weight: bold;
+  }
