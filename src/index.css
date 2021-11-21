@@ -6,6 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+padding-top: 12%;
+padding-bottom: 1%;
+
 }
 
 code {
@@ -14,9 +17,27 @@ code {
 }
 
 .navbar-fondo{
-  background-color: #e7e7e7;
+  background-color: #ffb0bd;
 }
 
 .cargando{
     font-size: 3rem;
+}
+
+.card{
+  border-color:#dd4871;
+  box-shadow: 7px 7px 15px #592A08
+}
+
+.btn-info{
+  background-color:#dd4871;
+  border: #b43e69;
+}
+
+.btn-info:hover{
+  background-color: 
+  #dd4871 !important;
+}
+.btn-info:active{
+  background-color: #dd4871 !important;
 }

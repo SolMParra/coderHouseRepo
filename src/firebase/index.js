@@ -2,12 +2,14 @@ import firebase from 'firebase/app';
 import '@firebase/firestore';
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyBnDomNomHyc7mTagyWu6Tcx0SHZ1FLbTU",
-    authDomain: "soleecommerce-95eb0.firebaseapp.com",
-    projectId: "soleecommerce-95eb0",
-    storageBucket: "soleecommerce-95eb0.appspot.com",
-    messagingSenderId: "1043719939712",
-    appId: "1:1043719939712:web:194ce4727373b54c05a865"
+  
+        apiKey: "AIzaSyDtCyUJ0xLxQXlNLaM3QhXzkOr1ddx0Lg0",
+        authDomain: "solecommerce-16c0f.firebaseapp.com",
+        projectId: "solecommerce-16c0f",
+        storageBucket: "solecommerce-16c0f.appspot.com",
+        messagingSenderId: "531193961378",
+        appId: "1:531193961378:web:19b10ad4736f59e5d270fb"
+     
 })
 
 export function getFirebase() {
