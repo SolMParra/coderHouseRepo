@@ -26,7 +26,7 @@ const ItemList = () =>{
             docs.forEach(doc => {
                 arr.push({id: doc.id, data: doc.data()});
                 console.log(doc.id);
-                 console.log(data);
+                 console.log(arr, "array");
             })
 
             setItems(arr);
@@ -39,13 +39,12 @@ const ItemList = () =>{
     const getProductsFromDBCategory = () => {
         
         
-        db.collection('productos').where("categoryName", "==", id).get()
+        db.collection('productos').where("category", "==", id).get()
         .then(docs =>{
             let arr = [];
             docs.forEach(doc => {
                 arr.push({id: doc.id, data: doc.data()});
-                // console.log(doc.id);
-                // console.log(doc.data());
+               
             })
 
             setItems(arr);
@@ -60,72 +59,6 @@ const ItemList = () =>{
         
     }, [id]);   
 
-
-
-
-
-
-    
-
-    // constante es una API
-    // const  products = [
-
-    //     {
-    //         id: 1,
-    //         titulo: 'Bujia',
-    //         category: '1',
-    //         descripcion: '',
-    //         precio: 1100
-    //     },
-    //     {
-    //         id: 2,
-    //         titulo: 'bujia 2',
-    //         category: '1',
-    //         descripcion: '',
-    //         precio: 600
-    //     },
-    //     {
-    //         id: 3,
-    //         titulo: 'Amortiguador',
-    //         category: '2',            
-    //         descripcion: '',
-    //         precio: 900
-    //     },
-    //     {
-    //         id: 4,
-    //         titulo: 'Axial',
-    //         category: '3',            
-    //         descripcion: '',
-    //         precio: 800
-    //     },
-    //     {
-    //         id: 5,
-    //         titulo: 'Axial 2',
-    //         category: '3',            
-    //         descripcion: '',
-    //         precio: 1000
-    //     }
-    // ];
-
-    // const getProducts = new Promise((resolve, reject)=>{
-    //     setTimeout(()=>{ resolve(products); },2000);
-    // } );
-
-
-    //  const llamarProductos = () => {
-    //     getProducts.then((resp) =>{
-
-    //         const productosCategoria = resp.filter(produc => produc.category === id);
-    //         if(productosCategoria.length>0){
-    //             setItems(productosCategoria);
-    //         }else{
-    //             setItems(resp);
-    //         }
-    //     });
-    //  }
-
-    // useEffect(() => { setItems([]); llamarProductos();} , [id]);    
-    
 
     return (
 
@@ -154,11 +87,7 @@ const ItemList = () =>{
                          <h5 className="col-12 text-center mt-5" >cargando items...</h5>
                      }
 
-                    {/* <Producto nombre='Bujia' precio='500' stock='10'/>
-                    <Producto nombre='Alternador' precio='200' stock='15' />
-                    <Producto nombre='Amortiguador' precio='350' stock='10'/>
-                    <Producto nombre='Correa' precio='4500' stock='10'/>
-                    <Producto nombre='Axial' precio='7000' stock='10'/> */}
+                  
                 </div>
         </>
 

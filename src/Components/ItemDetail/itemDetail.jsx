@@ -1,7 +1,6 @@
 import './itemDetail.css';
 import { useEffect, useState, useContext } from 'react';
 import {Link, useParams} from 'react-router-dom';
-import { useHistory } from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount';
 import {Store} from '../../store';
 
@@ -110,8 +109,8 @@ const ItemDetail = (prod) =>{
         <div className="container">
             <div className="row mt-4">
                 <div className="col-8 text-center">
-                    <img src={`../../../images/${prod.item.img}`} width="500" />
-
+                    <img src={prod.item.img} width="500" />
+                   
                 </div>
                 <div className="col-4">
                     <div className="row">

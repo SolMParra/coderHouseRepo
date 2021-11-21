@@ -1,15 +1,13 @@
 import './styles/App.css';
 import Navbar from './Components/NavBar/Navbar';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import imagen from './assets/gabtec-logo_135.gif';
+import imagen from './assets/sollogo.png';
 import {useState} from 'react';
 import Listado from './Components/ListProdHome/listadoProdHome';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './Components/Cart/Cart';
 import {Store} from './store';
 import Checkout from './Components/Checkout/Checkout';
-// Put any other imports below so that CSS from your
-// components takes precedence over default styles.
 
 function App() {
 
@@ -20,7 +18,7 @@ function App() {
 
 
   return (
-    <>
+    <div>
     <Store.Provider value={[data,setData]}>
       <BrowserRouter>
         <Navbar src={imagen}/>
@@ -46,7 +44,7 @@ function App() {
         </Switch>
       </BrowserRouter>
     </Store.Provider>
-    </>
+    </div>
   );
 }
 
