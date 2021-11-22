@@ -1,4 +1,3 @@
-import LogoCarro from '../../assets/logo-carro.png';
 import Widgetcart from '../WidgetCart/WidgetCart';
 import { useState, useContext } from 'react';
 import './carro.css';
@@ -24,7 +23,8 @@ function Carro(){
                 <div className="contador">
                     <span>{data.cantidad}</span>
                 </div>
-                <a href="#"><img src={LogoCarro} width="30" onClick={openWidgetCard} alt="LogoCarritoCompras"/></a>
+                <a href="#"><i class="bi bi-basket" style={{ fontSize: "2rem", color: "BLACK"}} onClick={openWidgetCard} alt="LogoCarritoCompras"></i></a>
+
             </div>
             <Widgetcart show={verWidgetCar} action={openWidgetCard} />
 

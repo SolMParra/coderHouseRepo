@@ -25,14 +25,10 @@ const Cart = () =>{
     }
 
     const totalCarro = (data) => {
-
-        // const reducer = (accumulator, currentValue) => accumulator + currentValue;
         let total = 0;
         let totalFila = 0;
 
-        // 1 + 2 + 3 + 4
         if(data.items.length>0){
-        // console.log(data.items.reduce(reducer));
             data.items.map(data=>{
                 totalFila = data.item.precio * data.item.cantidadEnCarro;
                 total = total + totalFila;
@@ -76,7 +72,7 @@ const Cart = () =>{
                         <td>{item.item.cantidadEnCarro}</td>
                         <td>{item.item.precio}</td>
                         <td>{item.item.precio*item.item.cantidadEnCarro}</td>
-                        <td><button onClick={() => eliminarItem(index)} className="btn btn-outline-danger btn-sm">X</button></td>
+                        <td><i class="bi bi-trash"  onClick={() => eliminarItem(index)}></i></td>
                         </tr>
                     )
                     :

@@ -6,11 +6,11 @@ import firestore, { getFirestore } from '../../firebase';
 
 const ItemDetailContainer = () => {
 
-    // declaro el state
+  
     const [prod, setProd] = useState([]);
     const db = getFirestore();
 
-    //recibo parametro del id del producto
+   
     const {idProducto} = useParams();
 
    

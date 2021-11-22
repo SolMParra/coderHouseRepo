@@ -71,7 +71,7 @@ const Widgetcart = ({show,action}) =>{
                             <th scope="row">{index+1}</th>
                             <td>{item.item.titulo}</td>
                             <td>{item.item.cantidadEnCarro}</td>
-                            <td><button onClick={() => eliminarItem(index)} className="btn btn-outline-danger btn-sm">X</button></td>
+                            <td><i class="bi bi-trash" onClick={() => eliminarItem(index)}></i></td>
                             </tr>
 
                             )
@@ -79,10 +79,7 @@ const Widgetcart = ({show,action}) =>{
                             : 
                             <tr><th scope="row" colSpan="4" className="text-center sinProductos" >No hay productos en el carro.</th></tr>
                         }
-{/* 
-<div key={item.item.titulo} className="col-12 text-center">
-                                        <h5>{item.item.titulo}</h5>
-                                </div> */}
+
                         {data.items.length > 0 ? <tr><td colSpan="4"><button onClick={() => eliminarTodos()} className="btn btn-outline-dark btn-sm btn-block">Limpiar carro</button></td></tr> : ''}
                         </tbody>
                         </table> 

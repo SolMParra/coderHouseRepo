@@ -6,16 +6,12 @@ import { data } from 'jquery';
 
 const ItemList = () =>{
 
-    // recibo el parametro
-
     const {id} = useParams();
     
     const [items, setItems] = useState([]);
 
-    //declaro variable para aaceder a bd 
     const db = getFirestore();
 
-    // Obtengo todos los productos si no pasan id de categoria
     const getProductsFromDB = () => {
         console.log("holA1")
         
@@ -35,7 +31,7 @@ const ItemList = () =>{
     }
 
 
-    // Obtengo los productos segun la categoria pasada por url
+  
     const getProductsFromDBCategory = () => {
         
         

@@ -18,14 +18,10 @@ const Checkout = () => {
     });
 
     const totalCarro = (data) => {
-
-        // const reducer = (accumulator, currentValue) => accumulator + currentValue;
         let total = 0;
         let totalFila = 0;
 
-        // 1 + 2 + 3 + 4
         if(data.items.length>0){
-        // console.log(data.items.reduce(reducer));
             data.items.map(data=>{
                 totalFila = data.item.precio * data.item.cantidadEnCarro;
                 total = total + totalFila;

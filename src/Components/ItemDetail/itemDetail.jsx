@@ -78,20 +78,7 @@ const ItemDetail = (prod) =>{
         }
     }
     
-    //console.log(data);
 
-       //console.log(prod.item);
-        
-       //const history = useHistory();
-
-    //    function activateLasers() {
-    //        alert('Producto Agregardo');
-    //      history.push("/cart");
-    //    }
-
-
-
-        // recibir parametro enviado por la ruta
        const {id} = useParams();
 
        useEffect(() => {
