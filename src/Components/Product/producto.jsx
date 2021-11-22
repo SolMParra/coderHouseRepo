@@ -43,7 +43,6 @@ function Producto({ id, nombre, precio, stock, img }) {
                     <div className="card-body ">
                         <h5 className="card-title">{nombre}  ${precio}</h5>
                         <p className="card-text">Stock : {stock}</p>
-                        {/* <a href="#!" className="btn btn-outline-primary btn-sm btn-block" onClick={() => CarroAdd()}>Agregar al carro</a> */}
                         <Link to={`/detail/${id}`} className="btn btn-info btn-sm btn-block">Ver detalle</Link>
                     </div>
                 </div>

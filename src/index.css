@@ -17,7 +17,7 @@ code {
 }
 
 .navbar-fondo{
-  background-color: #ffb0bd;
+  background-color: #FFD7DE;
 }
 
 .cargando{
@@ -25,19 +25,46 @@ code {
 }
 
 .card{
-  border-color:#dd4871;
-  box-shadow: 7px 7px 15px #592A08
+
+  box-shadow: 7px 7px 10px #592A08
 }
 
 .btn-info{
-  background-color:#dd4871;
-  border: #b43e69;
+  background-color:#C6387F;
+  border:#FA5F7B ;
 }
 
 .btn-info:hover{
   background-color: 
-  #dd4871 !important;
+  #FA5F7B !important;
 }
 .btn-info:active{
-  background-color: #dd4871 !important;
+  background-color: #C6387F!important;
 }
+
+.nav-link{
+  color: black;
+}
+
+.nav-link:active{
+color: 
+  #FA5F7B !important;
+}
+
+.nav-link:hover{
+  color: 
+    #FA5F7B !important;
+  }
+  
+.btn-secondary{
+    background-color:#C6387F;
+    border:#FA5F7B!important ;
+
+}
+.btn-secondary:hover{
+    background-color: 
+  #FA5F7B !important;
+  }
+.btn-secondary:active{
+    background-color: #C6387F!important;
+ }

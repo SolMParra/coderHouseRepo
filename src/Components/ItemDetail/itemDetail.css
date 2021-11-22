@@ -1,7 +1,7 @@
 .titulo{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5rem;
-    color: blue;
+    color:#C6387F;
 }
 
 .precio{
@@ -23,7 +23,7 @@
 }
 
 .descripcionTexto{
-    color:black;
+    color:#C6387F;
     font-style: italic;
     font-weight: lighter;
 }

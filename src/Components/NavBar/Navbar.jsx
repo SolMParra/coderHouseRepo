@@ -45,7 +45,7 @@ function Navbar(imagen) {
                     cate.map((item, index) => (
 
 
-                        <Link key={item.id} className="nav-link" to={`/category/${item.data.nombre}`}>{item.data.nombre}</Link>      //+'-'+item.nombre                               
+                        <Link key={item.id} className="nav-link" to={`/category/${item.data.nombre}`}>{item.data.nombre}</Link>                       
 
                     ))
                 }

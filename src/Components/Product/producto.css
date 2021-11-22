@@ -9,7 +9,7 @@
 
 .prodDestacados{
     color: transparent;
-    background-color: #b43e69;
+    background-color: #C6387F;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255, 255, 255, .5) 25px, rgba(255, 255, 255, .5) 50px);    
     background-clip: text;
     animation: color 50s linear infinite;
