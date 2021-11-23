@@ -10,12 +10,10 @@ const Cart = () =>{
     console.log(data);
 
     const eliminarItem = (id) => {
-
-        //antes de eliminar guardo la cantidad del producto en el carro
-        const cantidadEliminada = data.items[id].item.cantidadEnCarro;
-        //elimino el item del array 
+      const cantidadEliminada = data.items[id].item.cantidadEnCarro;
+       
         data.items.splice(id,1);
-        // seteo la cantidad (le resto la cantidad eliminada del item) y recupero el carro nuevamente
+        
         setData({
             ...data,
             cantidad: data.cantidad - cantidadEliminada,

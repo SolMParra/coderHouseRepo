@@ -43,7 +43,7 @@ function Producto({ id, nombre, precio, stock, img }) {
                     <div className="card-body ">
                         <h5 className="card-title">{nombre}  ${precio}</h5>
                         <p className="card-text">Stock : {stock}</p>
-                        <Link to={`/detail/${id}`} className="btn btn-info btn-sm btn-block">Ver detalle</Link>
+                        <Link to={`/detail/${id}`} className="btn btn-info btn-sm btn-block">Ir al detalle</Link>
                     </div>
                 </div>
             </div>
