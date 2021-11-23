@@ -1,4 +1,3 @@
-import './styles/App.css';
 import Navbar from './Components/NavBar/Navbar';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import imagen from './assets/sollogo.png';
