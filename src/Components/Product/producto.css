@@ -1,0 +1,31 @@
+.anchoCard {
+    width: 18rem;
+    margin-top: 30px;
+    margin-left: 50px;
+
+}
+
+
+
+.prodDestacados{
+    color: transparent;
+    background-color: #C6387F;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255, 255, 255, .5) 25px, rgba(255, 255, 255, .5) 50px);    
+    background-clip: text;
+    animation: color 50s linear infinite;
+    background-size: 200%;    
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+
+}
+
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}

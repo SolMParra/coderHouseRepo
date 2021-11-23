@@ -1,0 +1,29 @@
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color:#C6387F;
+}
+
+.precio{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+}
+
+.descripcion{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+}
+
+.precioValor{
+    color: red;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.descripcionTexto{
+    color:#C6387F;
+    font-style: italic;
+    font-weight: lighter;
+}
