@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import Producto from '../Product/producto';
 import { useParams } from 'react-router-dom';
 import firestore, { getFirestore } from '../../firebase';
-import { data } from 'jquery';
+
 
 const ItemList = () =>{
 

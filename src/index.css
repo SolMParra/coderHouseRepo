@@ -26,7 +26,7 @@ code {
 
 .card{
 
-  box-shadow: 7px 7px 10px #592A08
+  box-shadow: 0px -4px 8px 0px rgba(52, 69, 89, 0.2);
 }
 
 .btn-info{

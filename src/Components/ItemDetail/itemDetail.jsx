@@ -6,15 +6,18 @@ import {Store} from '../../store';
 
 const ItemDetail = (prod) =>{
 
-    const [data, setData] = useContext(Store);  
+    const [data, setData] = useContext(Store);
     const [count, setCount] = useState(1);
-
+    const [stock, setStock] = useState(false)
     const add = () => {
 
             if(count<prod.item.stock){
                 setCount(count + 1);
             }else{
-                alert('Stock Insuficiente!');
+                setStock (true)
+                setTimeout(() => {
+                 setStock(false)   
+                }, 5000);
             }
     }
 
@@ -108,6 +111,8 @@ const ItemDetail = (prod) =>{
                             add={add}
                             less={less}
                             />
+                              {stock && <h5 style={{color: "#C6387"}}>Stock insuficiente</h5>}  
+
                             <button className="btn btn-outline-primary btn-sm btn-block" onClick={CarroAdd}>Agregar al Carro</button>
                             
                         </div>                        
