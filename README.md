@@ -1,7 +1,7 @@
 SolMarket
 E-Commerce creado para curso de react en coder house.
 
-Esta app creada utilizando firebase y boostrap
+Esta app fue creada utilizando firebase y bootstrap
 
 Para levantar este proyecto puede utilizar los siguente parametros
 
